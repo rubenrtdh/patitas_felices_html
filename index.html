@@ -459,58 +459,59 @@
 
   <!-- map section -->
 
-  <!-- contacto section -->
-<section class="contact_section layout_padding">
-  <div class="container">
-    <div class="form_container bg-light p-5 rounded shadow">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10">
-          <form action="">
-            <div class="text-center mb-4">
-              <h3>Contacto</h3>
-              <p>¿Tienes alguna duda? Escríbenos y te responderemos lo antes posible.</p>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Nombre completo" required>
-            </div>
-            <div class="form-group">
-              <input type="tel" class="form-control" placeholder="Número de teléfono" required>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" placeholder="Correo electrónico" required>
-            </div>
-            <div class="form-group">
-              <input type="date" class="form-control" placeholder="Fecha preferida de cita">
-            </div>
-            <div class="form-group">
-              <input type="time" class="form-control" placeholder="Hora preferida">
-            </div>
-            <div class="form-group">
-              <select class="form-control">
-                <option value="">Selecciona un servicio</option>
-                <option>Consulta Veterinaria</option>
-                <option>Peluquería para Mascotas</option>
-                <option>Adopciones</option>
-                <option>Tienda</option>
-                <option>Otros</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" rows="5" placeholder="Mensaje o comentarios adicionales"></textarea>
-            </div>
-            <div class="form-group form-check mb-4">
-              <input type="checkbox" class="form-check-input" id="acepto">
-              <label class="form-check-label" for="acepto">Acepto la política de privacidad</label>
-            </div>
-            <div class="text-center">
-              <button class="btn btn-primary px-4 py-2" type="submit">Enviar</button>
-            </div>
-          </form>
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="form_container bg-light p-5 rounded shadow">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <!-- Cambiado el action aquí -->
+            <form action="http://172.22.200.240/resultado.php" method="POST">
+              <div class="text-center mb-4">
+                <h3>Contacto</h3>
+                <p>¿Tienes alguna duda? Escríbenos y te responderemos lo antes posible.</p>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre completo" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" name="telefono" placeholder="Número de teléfono" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
+              </div>
+              <div class="form-group">
+                <input type="date" class="form-control" name="fecha" placeholder="Fecha preferida de cita">
+              </div>
+              <div class="form-group">
+                <input type="time" class="form-control" name="hora" placeholder="Hora preferida">
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="servicio">
+                  <option value="">Selecciona un servicio</option>
+                  <option>Consulta Veterinaria</option>
+                  <option>Peluquería para Mascotas</option>
+                  <option>Adopciones</option>
+                  <option>Tienda</option>
+                  <option>Otros</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" rows="5" name="mensaje" placeholder="Mensaje o comentarios adicionales"></textarea>
+              </div>
+              <div class="form-group form-check mb-4">
+                <input type="checkbox" class="form-check-input" name="acepto" value="sí" id="acepto">
+                <label class="form-check-label" for="acepto">Acepto la política de privacidad</label>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary px-4 py-2" type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
 
 
 
